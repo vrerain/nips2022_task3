@@ -1,4 +1,4 @@
-# Programe for Task3
+# Code for Task3
 We utilize the DKT model for this task. This DKT model can track the students' knowledge status through the students' writing records, then, we generate the submission data by students' knowledge status. 
 One need to perform the following steps:
 - Process the raw training data for the DKT model.
