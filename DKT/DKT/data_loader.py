@@ -3,7 +3,6 @@ import torch.utils.data as Data
 from torch.utils.data.dataset import Dataset
 import numpy as np
 import os
-import math
 
 path = os.path.join('data')
 
@@ -61,8 +60,10 @@ class ValTestDataLoader(object):
         test_loader = get_data_loader2(os.path.join(path,
                                                     'temp', 'test_data.npy'), batch_size, False)
         self.test_loader = test_loader
-        
+
+
 class GeneratroDataLoader(object):
     def __init__(self, batch_size):
-        gen_loader = get_data_loader(os.path.join(path, 'temp', 'all_data.npy'), os.path.join(path, 'temp', 'all_user_list.npy'), batch_size, True)
+        gen_loader = get_data_loader(os.path.join(path, 'temp', 'all_data.npy'), os.path.join(
+            path, 'temp', 'all_user_list.npy'), batch_size, True)
         self.gen_loader = gen_loader

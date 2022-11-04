@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from sqlalchemy import null
 import tqdm
-import random
 
 user_list = []
 student_list = []
@@ -73,7 +71,8 @@ def divide_data(division_ratio):
         os.mkdir(os.path.join(path, 'temp'))
     rows = int(train_data.shape[0] * 0.85) + 1
     np.save(os.path.join(path, 'temp', 'train_data.npy'), train_data[:rows])
-    np.save(os.path.join(path, 'temp', 'train_user_list.npy'), user_list[:rows])
+    np.save(os.path.join(path, 'temp', 'train_user_list.npy'),
+            user_list[:rows])
     np.save(os.path.join(path, 'temp', 'test_data.npy'), train_data[rows:])
     np.save(os.path.join(path, 'temp', 'test_user_list.npy'), user_list[rows:])
     np.save(os.path.join(path, 'temp', 'all_data.npy'), train_data)

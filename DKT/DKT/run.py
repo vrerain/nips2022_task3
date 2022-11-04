@@ -1,9 +1,6 @@
-from encodings import utf_8
-import enum
 from .data_divide import divide_data
 import torch
 import torch.nn as nn
-import torch.optim as optim
 import numpy as np
 from sklearn.metrics import roc_auc_score, accuracy_score, mean_squared_error, mean_absolute_error
 from .data_loader import TrainDataLoader, ValTestDataLoader, GeneratroDataLoader
